@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Maintenance Service 44</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #1f2a36;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 140px;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #1f2a36;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #f28c28;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #d9771f;
+}
+
+footer {
+    background: #1f2a36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .services, .contact {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Multi Maintenance Service 44">
+    <h1>Multi Maintenance Service 44</h1>
+    <p>Maintenance industrielle & services aux particuliers</p>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="services">
+<h2>Nos services</h2>
+<div class="services">
+
+    <div class="card">
+        <h3>Maintenance industrielle</h3>
+        <ul>
+            <li>Maintenance préventive et corrective</li>
+            <li>Dépannage machines industrielles</li>
+            <li>Interventions sur site</li>
+            <li>Entretien d’équipements</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Services aux particuliers</h3>
+        <ul>
+            <li>Dépannage technique</li>
+            <li>Petites réparations</li>
+            <li>Entretien équipements</li>
+            <li>Assistance à domicile</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+<section id="apropos">
+<h2>À propos</h2>
+<p>
+Basé à <strong>Saint-Molf (44350)</strong>, <strong>Multi Maintenance Service 44</strong>
+intervient auprès des professionnels et des particuliers pour tous travaux de
+maintenance et de dépannage.  
+Sérieux, réactif et à l’écoute, je vous propose des solutions fiables et durables.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+
+    <div class="card">
+        <p>📞 Téléphone : 06 XX XX XX XX</p>
+        <p>📧 Email : contact@multimaintenance44.fr</p>
+        <p>📍 Zone d’intervention : Saint-Molf & alentours (44)</p>
+    </div>
+
+    <div class="card">
+        <form action="https://formsubmit.co/msmaintenance44@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Nom" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+</div>
+</section>
+
+<footer>
+© 2026 – Multi Maintenance Service 44 – Saint-Molf
+</footer>
+
+</body>
+</html>
+logo.png 
