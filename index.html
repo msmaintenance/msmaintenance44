@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Maintenance Service 44 | Maintenance Industrielle & Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #38b6ff;     
+            --accent: #ff9a00;    
+            --dark: #1a1a1a;       
+            --light: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; margin: 0; color: #444; background-color: var(--light); scroll-behavior: smooth; }
+        
+        /* HEADER & NAV */
+        header { background: var(--dark); color: var(--white); padding: 5rem 10% 3rem; text-align: center; border-bottom: 6px solid var(--accent); }
+        .logo { max-width: 300px; width: 100%; border-radius: 8px; margin-bottom: 20px; border: 3px solid var(--primary); }
+        nav { background: var(--white); padding: 0; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        nav a { display: inline-block; color: var(--dark); padding: 1.2rem 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* SECTIONS */
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.2rem; color: var(--dark); text-transform: uppercase; margin-bottom: 10px; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 0 auto; }
+
+        /* ABOUT & SERVICES */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .highlight { color: var(--accent); font-weight: 700; }
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        ul { list-style: none; padding: 0; }
+        ul li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        ul li::before { content: "➔"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        /* ZONE D'INTERVENTION */
+        .zone-box { background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); }
+        .city-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+        .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
+
+        /* FORMULAIRE DE CONTACT */
+        .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+        .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
+        .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: var(--dark); }
+        .form-group input, .form-group textarea, .form-group select { 
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Inter', sans-serif; font-size: 1rem;
+        }
+        .btn-submit { 
+            background: var(--accent); color: var(--dark); border: none; padding: 15px 30px; font-weight: 900; 
+            text-transform: uppercase; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s;
+        }
+        .btn-submit:hover { background: var(--primary); color: white; }
+
+        /* FOOTER */
+        footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .business-card-box { background: #222; padding: 10px; border-radius: 8px; border: 1px solid #333; max-width: 280px; }
+        .business-card-img { width: 100%; height: auto; border-radius: 4px; display: block; }
+        .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; margin-top: 20px; font-size: 0.75rem; }
+
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Logo MMS 44" class="logo">
+    <h1>Multi Maintenance Service 44</h1>
+    <p style="color: var(--primary); font-weight: bold; text-transform: uppercase;">Maintenance Industrielle & Services</p>
+</header>
+
+<nav>
+    <a href="#about">L'Entreprise</a>
+    <a href="#services">Prestations</a>
+    <a href="#zone">Secteur</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="section-title"><h2>15 ans d'expertise technique</h2></div>
+    <div class="about-grid">
+        <div>
+            <p>Basé à <span class="highlight">Saint-Molf</span>, **MMS 44** propose un service de maintenance rigoureux pour les entreprises et les particuliers.</p>
+            <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
+        </div>
+        <div style="background: var(--dark); color: white; padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent);">
+            <h3 style="color: var(--accent); margin-top:0;">Dépannage 06 77 85 64 87</h3>
+            <p>Une panne immobilise votre production ? Appelez-moi pour une intervention prioritaire.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background-color: #f1f5f9;">
+    <div class="section-title"><h2>Nos Prestations</h2></div>
+    <div class="grid-services">
+        <div class="card">
+            <h3>🏭 Industrie et PME</h3>
+            <ul>
+                <li>Maintenance préventive & corrective</li>
+                <li>Dépannage machines & process</li>
+                <li>Soudure Acier/Inox certifiée</li>
+                <li>Diagnostics Elec/Pneumatique</li>
+                <li>Assistance technique sur site</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>🏠 Particuliers</h3>
+            <ul>
+                <li>Dépannage électrique & mécanique</li>
+                <li>Soudure (Portails, mobiliers, cadres)</li>
+                <li>Entretien & Montage d'équipements</li>
+                <li>Petits travaux de maintenance habitat</li>
+                <li>Conseils techniques personnalisés</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="zone">
+    <div class="section-title"><h2>Secteur d'Intervention</h2></div>
+    <div class="zone-box">
+        <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
+        <div class="city-grid">
+            <span class="city-tag">Saint-Molf</span><span class="city-tag">Guérande</span><span class="city-tag">Herbignac</span>
+            <span class="city-tag">La Baule</span><span class="city-tag">Saint-Nazaire</span><span class="city-tag">Nivillac</span>
+            <span class="city-tag">Assérac</span><span class="city-tag">Pornichet</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title"><h2>Contactez-nous</h2></div>
+    <div class="contact-flex">
+        <div class="contact-info-block">
+            <h3 style="color: var(--accent);">MMS 44</h3>
+            <p>📍 44350 Saint-Molf</p>
+            <p>📞 06 77 85 64 87</p>
+            <p>📧 msmaintenance44@gmail.com</p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            <p style="font-size: 0.9rem; font-style: italic;">"Réponse sous 24h maximum pour toute demande de devis par formulaire."</p>
+        </div>
+
+        <div class="form-container">
+            <form action="https://formspree.io/f/votre_code_ici" method="POST">
+                <div class="form-group">
+                    <label>Votre Nom / Entreprise</label>
+                    <input type="text" name="name" required placeholder="Ex: Jean Dupont / Entreprise X">
+                </div>
+                <div class="form-group">
+                    <label>Votre Email</label>
+                    <input type="email" name="email" required placeholder="nom@exemple.com">
+                </div>
+                <div class="form-group">
+                    <label>Type de prestation</label>
+                    <select name="type">
+                        <option value="industrie">Maintenance Industrielle</option>
+                        <option value="particulier">Service Particulier</option>
+                        <option value="soudure">Travaux de Soudure</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Votre Message</label>
+                    <textarea name="message" rows="5" required placeholder="Décrivez votre besoin..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#about">L'entreprise</a></li>
+            <li><a href="#services">Prestations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-info">
+        <h3>Contact Rapide</h3>
+        <p>📞 <strong>06 77 85 64 87</strong></p>
+        <p>📧 <strong>msmaintenance44@gmail.com</strong></p>
+        <p>🕒 Lun - Sam | 8h - 19h</p>
+    </div>
+    <div>
+        <h3>Carte de Visite</h3>
+        <div class="business-card-box">
+            <img src="business_card_mms44.jpg" alt="MMS 44 Carte de Visite" class="business-card-img">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><strong>MMS 44</strong> - Alexandre RENAULT | SIRET : 998 928 634 00018</p>
+        <p><a href="cgv.pdf" target="_blank">CGV</a> | <a href="#">Mentions Légales</a></p>
+        <p style="margin-top:10px; opacity:0.5;">© 2026 MMS 44</p>
+    </div>
+</footer>
+
+</body>
+</html>
