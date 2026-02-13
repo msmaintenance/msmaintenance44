@@ -41,88 +41,75 @@
         .section-title h2 { font-size: 2.2rem; color: var(--dark); text-transform: uppercase; margin-bottom: 10px; }
         .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 0 auto; }
 
-        /* ABOUT & SERVICES */
+        /* ABOUT */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         .highlight { color: var(--accent); font-weight: 700; }
+        
+        /* BLOC DEPANNAGE INTERACTIF */
+        .urgent-call { 
+            background: var(--dark); 
+            color: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            border-left: 8px solid var(--accent);
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+        .urgent-call:hover { transform: scale(1.02); background: #252525; }
+        .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 10px; }
+
+        /* SERVICES */
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
         ul { list-style: none; padding: 0; }
         ul li { margin-bottom: 12px; padding-left: 30px; position: relative; }
         ul li::before { content: "➔"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
 
-        /* ZONE & MAP HYBRIDE */
+        /* ZONE & CARTE FIXE */
         .zone-box { background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); margin-bottom: 40px; }
         .city-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
         .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
         
-        .map-container { 
-            position: relative; 
-            width: 100%; 
-            height: 450px; 
-            border-radius: 15px; 
-            overflow: hidden; 
-            box-shadow: var(--shadow); 
-            border: 3px solid var(--white); 
+        .map-fixed-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 4px solid white;
         }
-        /* Le cercle de rayon 40km visuel */
-        .map-radius-overlay {
+        .map-img { width: 100%; display: block; pointer-events: none; }
+        .map-overlay-circle {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 320px; /* Ajusté visuellement pour représenter 40km à ce niveau de zoom */
-            height: 320px;
-            border: 2px dashed var(--primary);
+            width: 65%; /* Rayon visuel */
+            height: 80%;
+            border: 3px dashed var(--primary);
             background: rgba(56, 182, 255, 0.15);
             border-radius: 50%;
-            pointer-events: none; /* Permet d'utiliser la carte en dessous */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .map-radius-overlay::after {
-            content: "Rayon 40km";
-            background: var(--primary);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: bold;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-top: -320px;
+            pointer-events: none;
         }
 
         /* CONTACT */
         .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
         .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
-        .contact-info-block a { color: white; text-decoration: none; }
+        .contact-info-block a { color: white; text-decoration: none; font-weight: bold; }
         .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: var(--dark); }
-        .form-group input, .form-group textarea, .form-group select { 
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Inter', sans-serif; font-size: 1rem;
-        }
-        .btn-submit { 
-            background: var(--accent); color: var(--dark); border: none; padding: 15px 30px; font-weight: 900; 
-            text-transform: uppercase; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s;
-        }
-        .btn-submit:hover { background: var(--primary); color: white; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; text-transform: uppercase; border-radius: 5px; cursor: pointer; width: 100%; }
 
         /* FOOTER */
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        footer h3 { color: var(--white); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; font-size: 1.1rem; }
-        .business-card-box { background: #222; padding: 10px; border-radius: 8px; border: 1px solid #333; max-width: 280px; }
-        .business-card-img { width: 100%; height: auto; border-radius: 4px; display: block; }
-        .qr-box { background: white; padding: 10px; border-radius: 8px; width: 130px; text-align: center; }
-        .qr-img { width: 100%; display: block; border-radius: 4px; }
-        .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; margin-top: 20px; font-size: 0.75rem; }
+        .qr-box { background: white; padding: 10px; border-radius: 8px; width: 120px; text-align: center; }
+        .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
 
-        @media (max-width: 900px) { 
-            .about-grid, .contact-flex { grid-template-columns: 1fr; }
-            nav a { padding: 1rem 15px; font-size: 0.8rem; }
-            .map-radius-overlay { width: 200px; height: 200px; } /* Ajusté pour mobile */
-            .map-radius-overlay::after { margin-top: -200px; }
-        }
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -147,10 +134,11 @@
             <p>Basé à <span class="highlight">Saint-Molf</span>, <strong>Multi Maintenance Service 44</strong> propose un service de maintenance rigoureux pour les entreprises et les particuliers.</p>
             <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
         </div>
-        <div style="background: var(--dark); color: white; padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent);">
-            <h3 style="color: var(--accent); margin-top:0;">Dépannage <a href="tel:0622390314" style="color: var(--accent); text-decoration: none;">06 22 39 03 14</a></h3>
-            <p>Une panne immobilise votre production ? Appelez-moi pour une intervention prioritaire.</p>
-        </div>
+        <a href="tel:0622390314" class="urgent-call">
+            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage (Cliquez pour appeler)</h3>
+            <span class="tel-link">06 22 39 03 14</span>
+            <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
+        </a>
     </div>
 </section>
 
@@ -180,7 +168,7 @@
     </div>
 </section>
 
-    <section id="zone">
+<section id="zone">
     <div class="section-title"><h2>Secteur d'Intervention</h2></div>
     <div class="zone-box">
         <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
@@ -188,28 +176,14 @@
             <span class="city-tag">Saint-Molf</span><span class="city-tag">Guérande</span><span class="city-tag">Herbignac</span>
             <span class="city-tag">La Baule</span><span class="city-tag">Saint-Nazaire</span><span class="city-tag">Nivillac</span>
             <span class="city-tag">Pénestin</span><span class="city-tag">Pornichet</span><span class="city-tag">Le Croisic</span>
-            <span class="city-tag">La Turballe</span><span class="city-tag">Piriac sur Mer</span>
         </div>
     </div>
     
-    <div class="map-static-container" style="position: relative; max-width: 800px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 5px solid white;">
-        <img src="carte-zone.jpg" alt="Carte de zone d'intervention MMS44" style="width: 100%; display: block; filter: grayscale(20%);">
-
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                    width: 60%; height: 75%; border: 3px solid var(--primary); 
-                    background: rgba(56, 182, 255, 0.2); border-radius: 50%; pointer-events: none;
-                    display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 500px rgba(0,0,0,0.1);">
-            
-            <div style="width: 15px; height: 15px; background: var(--accent); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
-            
-            <span style="position: absolute; bottom: -30px; background: var(--primary); color: white; padding: 2px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">
-                Zone 40 km
-            </span>
-        </div>
+    <div class="map-fixed-container">
+        <img src="carte-secteur.jpg" alt="Zone intervention Saint-Molf" class="map-img">
+        <div class="map-overlay-circle"></div>
     </div>
 </section>
-
-       
 
 <section id="contact">
     <div class="section-title"><h2>Contactez-nous</h2></div>
@@ -225,27 +199,16 @@
 
         <div class="form-container">
             <form action="https://formspree.io/f/votre_code_ici" method="POST">
+                <div class="form-group"><input type="text" name="name" required placeholder="Votre Nom / Entreprise"></div>
+                <div class="form-group"><input type="email" name="email" required placeholder="Votre Email"></div>
                 <div class="form-group">
-                    <label>Votre Nom / Entreprise</label>
-                    <input type="text" name="name" required placeholder="Ex: Jean Dupont">
-                </div>
-                <div class="form-group">
-                    <label>Votre Email</label>
-                    <input type="email" name="email" required placeholder="nom@exemple.com">
-                </div>
-                <div class="form-group">
-                    <label>Type de prestation</label>
                     <select name="type">
                         <option value="industrie">Maintenance Industrielle</option>
                         <option value="particulier">Service Particulier</option>
                         <option value="soudure">Travaux de Soudure</option>
-                        <option value="autre">Autre demande</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>Votre Message</label>
-                    <textarea name="message" rows="5" required placeholder="Décrivez votre besoin..."></textarea>
-                </div>
+                <div class="form-group"><textarea name="message" rows="5" required placeholder="Votre Message"></textarea></div>
                 <button type="submit" class="btn-submit">Envoyer la demande</button>
             </form>
         </div>
@@ -259,35 +222,23 @@
             <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
             <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
             <li><a href="#zone" style="color:#ccc; text-decoration:none;">Secteur</a></li>
-            <li><a href="#contact" style="color:#ccc; text-decoration:none;">Contact</a></li>
         </ul>
     </div>
-    <div class="footer-info">
-        <h3>Horaires d'ouverture</h3>
-        <p>🕒 Lun - Ven : 8h - 18h</p>
-        <p>🕒 Samedi : 8h - 12h</p>
-        <p style="margin-top:15px;">📞 <strong><a href="tel:0622390314" style="color:white; text-decoration:none;">06 22 39 03 14</a></strong></p>
+    <div>
+        <h3>Contact</h3>
+        <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
+        <p>🕒 Lun - Ven : 8h - 18h / Sam : 8h - 12h</p>
     </div>
     <div>
-        <h3>Retrouvez-nous sur</h3>
-        <div style="display: flex; gap: 15px; align-items: flex-start; flex-wrap: wrap;">
-            <div class="qr-box">
-                <img src="qr-code-linkdin.png" alt="LinkedIn QR" class="qr-img">
-                <p style="font-size: 0.65rem; color: #0077b5; margin: 5px 0 0; font-weight: 900; letter-spacing: 0.5px;">LINKEDIN</p>
-            </div>
-            <div class="business-card-box">
-                <img src="business_card_mms44.jpg" alt="MMS 44 Carte de Visite" class="business-card-img">
-            </div>
+        <div class="qr-box">
+            <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+            <p style="font-size:0.6rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
         </div>
     </div>
-   <div class="footer-bottom">
-    <p><strong>Multi Maintenance Service 44</strong> - Alexandre RENAULT | SIRET : 998 928 634 00018</p>
-    <p>
-        <a href="cgv.pdf" target="_blank" style="color:#888; text-decoration:none; margin-right:15px;">CGV</a> | 
-        <a href="mentions-legales.html" style="color:#888; text-decoration:none; margin-left:15px;">Mentions Légales</a>
-    </p>
-    <p style="margin-top:10px; opacity:0.5;">© 2026 Multi Maintenance Service 44</p>
-</div>
+    <div class="footer-bottom">
+        <p><strong>Multi Maintenance Service 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
+        <p><a href="cgv.pdf" style="color:#888;">CGV</a> | <a href="mentions-legales.html" style="color:#888;">Mentions Légales</a></p>
+    </div>
 </footer>
 
 </body>
