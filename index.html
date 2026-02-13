@@ -179,24 +179,26 @@
         </div>
     </div>
     
-    <div class="map-fixed-container" style="position: relative; width: 100%; height: 400px; background-color: #e5e3df; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white; background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Saint-Molf&zoom=10&size=800x400&maptype=roadmap&markers=color:orange%7CSaint-Molf&key=VOTRE_CLE_ICI'); background-size: cover; background-position: center;">
+    <div class="map-fixed-container" style="position: relative; width: 100%; max-width: 900px; height: 450px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white;">
         
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.google.com/maps/vt/pb=!1m4!1m3!1i10!2i512!3i384!2m3!1e0!2sm!3i600000000!3m8!2sfr!3sp!5e1105!12m4!1e68!2m2!1sset!2sroadmap!4e0!5m1!5f2'); opacity: 0.6;"></div>
+        <img src="https://static-maps.yandex.ru/1.x/?lang=fr_FR&ll=-2.3323,47.3914&z=10&l=map&size=650,450" 
+             alt="Carte Saint-Molf" 
+             style="width: 100%; height: 100%; object-fit: cover; display: block;">
 
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                    width: 300px; height: 300px; border: 3px solid var(--primary); 
+                    width: 320px; height: 320px; border: 3px solid var(--primary); 
                     background: rgba(56, 182, 255, 0.2); border-radius: 50%; pointer-events: none;
-                    display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1000px rgba(0,0,0,0.05);">
+                    display: flex; align-items: center; justify-content: center;">
             
-            <div style="width: 20px; height: 20px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.3);"></div>
+            <div style="width: 16px; height: 16px; background: var(--accent); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
             
-            <span style="position: absolute; top: -35px; background: var(--primary); color: white; padding: 3px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;">
+            <span style="position: absolute; top: -40px; background: var(--primary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 900; text-transform: uppercase;">
                 Zone 40 km
             </span>
         </div>
 
-        <a href="tel:0622390314" style="position: absolute; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: var(--shadow); display: flex; align-items: center; gap: 8px;">
-            📞 Appeler MMS 44
+        <a href="tel:0622390314" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--dark); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 2px solid var(--accent);">
+            <span style="font-size: 1.2rem;">📞</span> Appeler pour un dépannage
         </a>
     </div>
 </section>
