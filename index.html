@@ -97,4 +97,140 @@
         .qr-box { background: white; padding: 10px; border-radius: 8px; width: 120px; text-align: center; }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
 
-        @media (max-width: 900px) { .about-grid, .contact-flex { grid
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Logo MMS 44" class="logo">
+    <h1>Multi Maintenance Service 44</h1>
+    <p style="color: var(--primary); font-weight: bold; text-transform: uppercase;">Maintenance Industrielle & Services aux particuliers</p>
+</header>
+
+<nav>
+    <a href="#about">L'Entreprise</a>
+    <a href="#services">Prestations</a>
+    <a href="#zone">Secteur</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="section-title"><h2>15 ans d'expertise technique</h2></div>
+    <div class="about-grid">
+        <div>
+            <p>Basé à <span class="highlight">Saint-Molf</span>, <strong>Multi Maintenance Service 44</strong> propose un service de maintenance rigoureux pour les entreprises et les particuliers.</p>
+            <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
+        </div>
+        <a href="tel:0622390314" class="urgent-call">
+            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage (Cliquez pour appeler)</h3>
+            <span class="tel-link">06 22 39 03 14</span>
+            <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
+        </a>
+    </div>
+</section>
+
+<section id="services" style="background-color: #f1f5f9;">
+    <div class="section-title"><h2>Nos Prestations</h2></div>
+    <div class="grid-services">
+        <div class="card">
+            <h3>🏭 Industrie et PME</h3>
+            <ul>
+                <li>Maintenance préventive & corrective</li>
+                <li>Dépannage machines & process</li>
+                <li>Soudure Acier/Inox</li>
+                <li>Diagnostics mécanique, électrique et pneumatique</li>
+                <li>Assistance technique sur site</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>🏠 Particuliers</h3>
+            <ul>
+                <li>Dépannage électrique & mécanique</li>
+                <li>Soudure (Portails, mobiliers, cadres)</li>
+                <li>Entretien & Montage d'équipements</li>
+                <li>Petits travaux de maintenance habitat</li>
+                <li>Conseils techniques personnalisés</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="zone">
+    <div class="section-title"><h2>Secteur d'Intervention</h2></div>
+    <div class="zone-box">
+        <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
+        <div class="city-grid">
+            <span class="city-tag">Saint-Molf</span><span class="city-tag">Guérande</span><span class="city-tag">Herbignac</span>
+            <span class="city-tag">La Baule</span><span class="city-tag">Saint-Nazaire</span><span class="city-tag">Nivillac</span>
+            <span class="city-tag">Pénestin</span><span class="city-tag">Pornichet</span><span class="city-tag">Le Croisic</span>
+        </div>
+    </div>
+    
+    <div class="map-fixed-container">
+        <img src="ma-carte.jpg" alt="Secteur d'intervention MMS 44" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+        <a href="tel:0622390314" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; white-space: nowrap;">
+            📞 APPELER : 06 22 39 03 14
+        </a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title"><h2>Contactez-nous</h2></div>
+    <div class="contact-flex">
+        <div class="contact-info-block">
+            <h3 style="color: var(--accent);">Multi Maintenance Service 44</h3>
+            <p>📍 44350 Saint-Molf</p>
+            <p>📞 <a href="tel:0622390314">06 22 39 03 14</a></p>
+            <p>📧 <a href="mailto:msmaintenance44@gmail.com">msmaintenance44@gmail.com</a></p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum pour toute demande de devis."</p>
+        </div>
+
+        <div class="form-container">
+            <form action="https://formspree.io/f/votre_code_ici" method="POST">
+                <div class="form-group"><input type="text" name="name" required placeholder="Votre Nom / Entreprise"></div>
+                <div class="form-group"><input type="email" name="email" required placeholder="Votre Email"></div>
+                <div class="form-group">
+                    <select name="type">
+                        <option value="industrie">Maintenance Industrielle</option>
+                        <option value="particulier">Service Particulier</option>
+                        <option value="soudure">Travaux de Soudure</option>
+                    </select>
+                </div>
+                <div class="form-group"><textarea name="message" rows="5" required placeholder="Votre Message"></textarea></div>
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <h3>Navigation</h3>
+        <ul style="padding:0;">
+            <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
+            <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
+            <li><a href="#zone" style="color:#ccc; text-decoration:none;">Secteur</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Contact</h3>
+        <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
+        <p>🕒 Lun - Ven : 8h - 18h / Sam : 8h - 12h</p>
+    </div>
+    <div>
+        <div class="qr-box">
+            <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+            <p style="font-size:0.6rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><strong>Multi Maintenance Service 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
+        <p><a href="cgv.pdf" style="color:#888;">CGV</a> | <a href="mentions-legales.html" style="color:#888;">Mentions Légales</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
