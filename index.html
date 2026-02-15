@@ -96,7 +96,7 @@
         .btn-map-call {
             position: absolute; 
             bottom: 30px; 
-            left: calc(70% + 100px); /* Décalage vers la droite */
+            left: calc(50% + 110px); /* Décalage vers la droite (3cm) */
             transform: translateX(-50%); 
             background: var(--accent); 
             color: var(--dark); 
@@ -113,7 +113,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Animation harmonisée bouton carte */
         .btn-map-call:hover {
             background: var(--primary);
             color: white;
@@ -132,13 +131,32 @@
         .btn-submit:hover { background: var(--primary); color: white; }
 
         /* FOOTER */
-        footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .qr-box { background: white; padding: 10px; border-radius: 8px; width: 120px; text-align: center; }
+        footer { 
+            background: #111; 
+            color: #ccc; 
+            padding: 60px 10% 20px; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 40px; 
+            align-items: center;
+        }
+        .footer-logo { max-width: 150px; border-radius: 8px; border: 1px solid var(--primary); }
+        .business-card-img { 
+            width: 100%; 
+            max-width: 300px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+            transition: transform 0.4s ease; 
+        }
+        .business-card-img:hover { transform: scale(1.05); }
+        .qr-box { background: white; padding: 10px; border-radius: 8px; width: 100px; text-align: center; }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
 
         @media (max-width: 900px) { 
             .about-grid, .contact-flex { grid-template-columns: 1fr; } 
-            .btn-map-call { left: 50%; } /* Recentrage automatique sur mobile pour éviter que le bouton sorte de l'écran */
+            .btn-map-call { left: 50%; } /* Recentrage sur mobile */
+            footer { text-align: center; }
+            .qr-box { margin: 0 auto; }
         }
     </style>
 </head>
@@ -211,7 +229,6 @@
     
     <div class="map-fixed-container">
         <img src="ma-carte.jpg" alt="Secteur d'intervention MMS 44" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-
         <a href="tel:0622390314" class="btn-map-call">
             📞 APPELER : 06 22 39 03 14
         </a>
@@ -250,24 +267,24 @@
 
 <footer>
     <div>
-        <h3>Navigation</h3>
-        <ul style="padding:0;">
-            <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
-            <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
-            <li><a href="#zone" style="color:#ccc; text-decoration:none;">Secteur</a></li>
-        </ul>
+        <img src="logo.jpg" alt="MMS 44 Logo" class="footer-logo">
+        <p style="color:white; font-weight:bold; margin-top:10px;">MMS 44</p>
     </div>
+
+    <div style="text-align: center;">
+        <h3 style="color: var(--accent); font-size: 0.9rem; margin-bottom: 15px;">Ma Carte de Visite</h3>
+        <img src="carte-de-visite.jpg" alt="Carte de Visite MMS 44" class="business-card-img">
+    </div>
+
     <div>
         <h3>Contact</h3>
         <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
-        <p>🕒 Lun - Ven : 8h - 18h / Sam : 8h - 12h</p>
-    </div>
-    <div>
         <div class="qr-box">
             <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
-            <p style="font-size:0.6rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
+            <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
         </div>
     </div>
+
     <div class="footer-bottom">
         <p><strong>Multi Maintenance Service 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
         <p><a href="cgv.pdf" style="color:#888;">CGV</a> | <a href="mentions-legales.html" style="color:#888;">Mentions Légales</a></p>
