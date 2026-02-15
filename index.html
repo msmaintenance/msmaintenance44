@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi Maintenance Service 44 | Maintenance Industrielle & Services</title>
+    
+    <meta name="description" content="MMS 44 : Maintenance industrielle, dépannage mécanique et soudure à Saint-Molf et sur la presqu'île Guérandaise. Intervention rapide pour PME et particuliers.">
+    <meta name="keywords" content="Maintenance, Industrie, Soudure, Dépannage, Saint-Molf, Guérande, Saint-Nazaire">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
         :root { 
             --primary: #38b6ff;     
@@ -95,17 +102,40 @@
         .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
         .map-fixed-container { position: relative; width: 100%; max-width: 900px; height: 500px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white; }
         
-        /* CORRECTION BOUTON CARTE */
-        .btn-map-call { position: absolute; bottom: 30px; left: 75%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 10px 50px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; transition: 0.3s; z-index: 10; }
-        .btn-map-call:hover { background: var(--primary); color: white; transform: translateX(-50%) scale(1.1); }
+        /* ANIMATION & POSITION BOUTON CARTE */
+        @keyframes pulse-btn {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+        .btn-map-call { 
+            position: absolute; 
+            bottom: 30px; 
+            left: 75%; 
+            transform: translateX(-50%); 
+            background: var(--accent); 
+            color: var(--dark); 
+            padding: 10px 50px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
+            border: 2px solid white; 
+            transition: 0.3s; 
+            z-index: 10;
+            animation: pulse-btn 2s infinite;
+            white-space: nowrap;
+        }
+        .btn-map-call:hover { background: var(--primary); color: white; animation: none; transform: translateX(-50%) scale(1.1); }
 
         /* CONTACT & FOOTER */
         .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
         .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
         .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
         .form-group { margin-bottom: 20px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
-        .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+        .rgpd-label { font-size: 0.75rem; color: #666; display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+        .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; text-transform: uppercase; margin-top: 10px; }
         .btn-submit:hover { background: var(--primary); color: white; }
         
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
@@ -118,13 +148,18 @@
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000; border: 2px solid white; transition: 0.3s; }
 
-        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } footer { text-align: center; } .qr-wrapper { justify-content: center; } .btn-map-call { width: 80%; text-align: center; font-size: 0.8rem; }}
+        @media (max-width: 900px) { 
+            .about-grid, .contact-flex { grid-template-columns: 1fr; } 
+            footer { text-align: center; } 
+            .qr-wrapper { justify-content: center; } 
+            .btn-map-call { left: 50%; width: 85%; font-size: 0.85rem; padding: 10px 20px; }
+        }
     </style>
 </head>
 <body id="top">
 
 <header>
-    <img src="logo.jpg" alt="Logo MMS 44" class="logo">
+    <img src="logo.jpg" alt="Logo MMS 44 Maintenance Industrielle" class="logo">
     <h1>Multi Maintenance Service 44</h1>
     <p style="color: var(--primary); font-weight: bold; text-transform: uppercase;">Maintenance Industrielle & Services aux particuliers</p>
 </header>
@@ -145,7 +180,7 @@
             <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
         </div>
         <a href="tel:0622390314" class="urgent-call">
-            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage</h3>
+            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage Urgent</h3>
             <span class="tel-link">06 22 39 03 14</span>
             <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
         </a>
@@ -163,7 +198,6 @@
                 <li>Soudure Acier/Inox</li>
                 <li>Diagnostics mécanique, électrique et pneumatique</li>
                 <li>Dépannage d'électroportatif et de machine outil</li>
-                <li>Renfort d'équipe</li>
                 <li>Assistance technique sur site</li>
             </ul>
         </div>
@@ -184,15 +218,15 @@
     <div class="section-title"><h2>Mes Réalisations</h2></div>
     <div class="gallery-grid">
         <div class="photo-card" onclick="openLightbox('photo1.jpg')">
-            <img src="photo1.jpg" alt="Maintenance">
+            <img src="photo1.jpg" alt="Exemple de maintenance industrielle MMS 44">
             <div class="photo-caption">Maintenance Industrielle</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo2.jpg')">
-            <img src="photo2.jpg" alt="Soudure">
+            <img src="photo2.jpg" alt="Travaux de soudure de précision">
             <div class="photo-caption">Travaux de Soudure</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo3.jpg')">
-            <img src="photo3.jpg" alt="Dépannage">
+            <img src="photo3.jpg" alt="Dépannage mécanique sur site">
             <div class="photo-caption">Dépannage Mécanique</div>
         </div>
     </div>
@@ -209,12 +243,12 @@
         <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
         <div class="city-grid">
             <span class="city-tag">Saint-Molf</span><span class="city-tag">Guérande</span><span class="city-tag">Herbignac</span>
-            <span class="city-tag">La Baule</span><span class="city-tag">Pornichet</span><span class="city-tag">Le Croisic</span><span class="city-tag">Saint-Nazaire</span><span class="city-tag">Nivillac</span>
-            <span class="city-tag">Pénestin</span><span class="city-tag">Muzillac</span><span class="city-tag">Sévérac</span><span class="city-tag">Pontchâteau</span><span class="city-tag">Saint André des Eaux</span>
+            <span class="city-tag">La Baule</span><span class="city-tag">Pornichet</span><span class="city-tag">Le Croisic</span><span class="city-tag">Saint-Nazaire</span>
+            <span class="city-tag">Pénestin</span><span class="city-tag">Muzillac</span><span class="city-tag">Pontchâteau</span>
         </div>
     </div>
     <div class="map-fixed-container">
-        <img src="ma-carte.jpg" alt="Secteur d'intervention MMS 44" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <img src="ma-carte.jpg" alt="Carte du secteur d'intervention MMS 44 autour de Saint-Molf" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         <a href="tel:0622390314" class="btn-map-call">📞 APPELER : 06 22 39 03 14</a>
     </div>
 </section>
@@ -225,8 +259,8 @@
         <div class="contact-info-block">
             <h3 style="color: var(--accent);">Multi Maintenance Service 44</h3>
             <p>📍 44350 Saint-Molf</p>
-            <p>📞 <a href="tel:0622390314" style="color:white;">06 22 39 03 14</a></p>
-            <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary);">msmaintenance44@gmail.com</a></p>
+            <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none;">06 22 39 03 14</a></p>
+            <p>📧 <a href="mailto:msmaintenance44@gmail.com?subject=Demande de renseignement MMS44&body=Bonjour, je vous contacte pour..." style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum."</p>
         </div>
@@ -241,12 +275,16 @@
                         <option value="soudure">Travaux de Soudure</option>
                     </select>
                 </div>
+                <div class="form-group"><textarea name="message" rows="5" required placeholder="Votre Message"></textarea></div>
+                
                 <div class="form-group">
-    <label style="font-size: 0.8rem; color: #666;">
-        <input type="checkbox" required> En envoyant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
-    </label>
-</div>
-<button type="submit" class="btn-submit">Envoyer la demande</button>
+                    <label class="rgpd-label">
+                        <input type="checkbox" required> 
+                        <span>J'accepte que mes données soient utilisées pour être recontacté dans le cadre de ma demande.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
             </form>
         </div>
     </div>
@@ -264,11 +302,10 @@
         </ul>
     </div>
     <div>
-        <h3>Contact</h3>
+        <h3>Contact Direct</h3>
         <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
-        <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
         <div style="margin-top: 20px;">
-            <img src="carte-de-visite.jpg" alt="Carte" class="footer-card-img">
+            <img src="carte-de-visite.jpg" alt="Carte de visite MMS 44" class="footer-card-img">
         </div>
     </div>
     <div>
@@ -276,13 +313,13 @@
         <div class="qr-wrapper">
             <div class="qr-box">
                 <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" rel="noopener">
-                    <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+                    <img src="qr-code-linkdin.png" alt="LinkedIn MMS 44" style="width:100%;">
                     <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
                 </a>
             </div>
             <div class="qr-box">
                 <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank" rel="noopener">
-                    <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
+                    <img src="qr-code-facebook.png" alt="Facebook MMS 44" style="width:100%;">
                     <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold;">FACEBOOK</p>
                 </a>
             </div>
@@ -291,13 +328,13 @@
     <div class="footer-bottom">
         <p><strong>Multi Maintenance Service 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
         <p>
-        <a href="cgv.html" style="color:#888; text-decoration:none;">CGV</a> | 
-        <a href="mentions-legales.html" style="color:#888; text-decoration:none;">Mentions Légales</a>
-    </p>
+            <a href="cgv.html" style="color:#888; text-decoration:none;">CGV</a> | 
+            <a href="mentions-legales.html" style="color:#888; text-decoration:none;">Mentions Légales</a>
+        </p>
     </div>
 </footer>
 
-<a href="#top" class="back-to-top">↑</a>
+<a href="#top" class="back-to-top" title="Retour en haut">↑</a>
 
 <script>
     function openLightbox(imgSrc) {
