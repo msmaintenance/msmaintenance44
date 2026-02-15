@@ -94,7 +94,9 @@
         .city-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
         .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
         .map-fixed-container { position: relative; width: 100%; max-width: 900px; height: 500px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white; }
-        .btn-map-call { position: absolute; bottom: 30px; left: 70%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; transition: 0.3s; }
+        
+        /* CORRECTION BOUTON CARTE */
+        .btn-map-call { position: absolute; bottom: 30px; left: 75%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; transition: 0.3s; z-index: 10; }
         .btn-map-call:hover { background: var(--primary); color: white; transform: translateX(-50%) scale(1.1); }
 
         /* CONTACT & FOOTER */
@@ -108,16 +110,15 @@
         
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
         .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
-        
-        /* ICI LE RETOUR À LA TAILLE INITIALE */
-        .footer-card-img { max-width: 100%; width: 200px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .footer-card-img { max-width: 100%; width: 260px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
-        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
+        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; transition: 0.3s; }
+        .qr-box:hover { transform: scale(1.05); }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000; border: 2px solid white; transition: 0.3s; }
 
-        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } footer { text-align: center; } .qr-wrapper { justify-content: center; } }
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } footer { text-align: center; } .qr-wrapper { justify-content: center; } .btn-map-call { width: 80%; text-align: center; font-size: 0.8rem; }}
     </style>
 </head>
 <body id="top">
@@ -224,8 +225,8 @@
         <div class="contact-info-block">
             <h3 style="color: var(--accent);">Multi Maintenance Service 44</h3>
             <p>📍 44350 Saint-Molf</p>
-            <p>📞 <a href="tel:0622390314">06 22 39 03 14</a></p>
-            <p>📧 <a href="mailto:msmaintenance44@gmail.com">msmaintenance44@gmail.com</a></p>
+            <p>📞 <a href="tel:0622390314" style="color:white;">06 22 39 03 14</a></p>
+            <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary);">msmaintenance44@gmail.com</a></p>
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
             <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum."</p>
         </div>
@@ -263,20 +264,20 @@
         <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
         <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
         <div style="margin-top: 20px;">
-            <img src="carte-de-visite.jpg" alt="Carte" style="width: 260px; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+            <img src="carte-de-visite.jpg" alt="Carte" class="footer-card-img">
         </div>
     </div>
     <div>
         <h3>Suivez-nous</h3>
         <div class="qr-wrapper">
             <div class="qr-box">
-                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank">
+                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" rel="noopener">
                     <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
                     <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
                 </a>
             </div>
             <div class="qr-box">
-                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank" rel="noopener">
                     <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
                     <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold;">FACEBOOK</p>
                 </a>
