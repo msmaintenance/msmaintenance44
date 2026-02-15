@@ -179,23 +179,27 @@
         </div>
     </div>
     
-    <div class="map-fixed-container" style="position: relative; width: 100%; max-width: 900px; height: 550px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white;">
-        
-        <img src="https://static-maps.yandex.ru/1.x/?lang=fr_FR&ll=-2.3323,47.3914&z=9&l=map&size=650,450" 
-             alt="Carte de la zone d'intervention" 
-             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+  <div class="map-fixed-container">
+    <img src="ma-carte.jpg" 
+         alt="Secteur d'intervention MMS 44" 
+         style="width: 100%; height: 100%; object-fit: cover; display: block;">
 
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                    width: 85%; height: 85%; border: 4px solid var(--primary); 
-                    background: rgba(56, 182, 255, 0.12); border-radius: 50%; pointer-events: none;
-                    display: flex; align-items: center; justify-content: center; min-width: 300px; min-height: 300px;">
-            
-            <div style="width: 20px; height: 20px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.5);"></div>
-            
-            <span style="position: absolute; top: 10%; background: var(--primary); color: white; padding: 5px 15px; border-radius: 4px; font-size: 0.9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-                Rayon 40 km
-            </span>
-        </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                width: 320px; height: 320px; border: 4px solid var(--primary); 
+                background: rgba(56, 182, 255, 0.15); border-radius: 50%; pointer-events: none;
+                display: flex; align-items: center; justify-content: center;">
+        
+        <div style="width: 20px; height: 20px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 15px rgba(0,0,0,0.5);"></div>
+        
+        <span style="position: absolute; top: -45px; background: var(--primary); color: white; padding: 6px 18px; border-radius: 4px; font-size: 1rem; font-weight: 900; text-transform: uppercase;">
+            Rayon 40 km
+        </span>
+    </div>
+
+    <a href="tel:0622390314" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; white-space: nowrap;">
+        📞 APPELER : 06 22 39 03 14
+    </a>
+</div>
 
         <a href="tel:0622390314" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: 900; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; white-space: nowrap; transition: 0.3s;">
             <span style="font-size: 1.4rem;">📞</span> APPELER : 06 22 39 03 14
