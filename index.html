@@ -57,6 +57,7 @@
             border: 2px solid transparent;
         }
         
+        /* Animation harmonisée bouton haut */
         .urgent-call:hover { 
             transform: scale(1.05); 
             background: var(--primary); 
@@ -65,7 +66,6 @@
         }
         
         .urgent-call:hover .tel-link { color: white; }
-
         .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; transition: 0.3s; }
 
         /* SERVICES */
@@ -92,11 +92,11 @@
             border: 4px solid white;
         }
 
-        /* Bouton Carte Animé */
+        /* Bouton Carte Décalé et Animé */
         .btn-map-call {
             position: absolute; 
             bottom: 30px; 
-            left: calc(50% + 100px); 
+            left: calc(50% + 100px); /* Décalage vers la droite */
             transform: translateX(-50%); 
             background: var(--accent); 
             color: var(--dark); 
@@ -113,6 +113,7 @@
             transition: all 0.3s ease;
         }
 
+        /* Animation harmonisée bouton carte */
         .btn-map-call:hover {
             background: var(--primary);
             color: white;
@@ -137,7 +138,7 @@
 
         @media (max-width: 900px) { 
             .about-grid, .contact-flex { grid-template-columns: 1fr; } 
-            .btn-map-call { left: 50%; } /* Recentrage sur mobile */
+            .btn-map-call { left: 50%; } /* Recentrage automatique sur mobile pour éviter que le bouton sorte de l'écran */
         }
     </style>
 </head>
