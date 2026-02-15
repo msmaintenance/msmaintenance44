@@ -41,7 +41,7 @@
         .section-title h2 { font-size: 2.2rem; color: var(--dark); text-transform: uppercase; margin-bottom: 10px; }
         .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 0 auto; }
 
-        /* ABOUT */
+        /* ABOUT & BOUTON APPEL HAUT */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         .highlight { color: var(--accent); font-weight: 700; }
         
@@ -53,10 +53,20 @@
             border-left: 8px solid var(--accent);
             text-decoration: none;
             display: block;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
-        .urgent-call:hover { transform: scale(1.02); background: #252525; }
-        .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 10px; }
+        
+        .urgent-call:hover { 
+            transform: scale(1.05); 
+            background: var(--primary); 
+            border-color: white;
+            box-shadow: 0 15px 35px rgba(56, 182, 255, 0.4);
+        }
+        
+        .urgent-call:hover .tel-link { color: white; }
+
+        .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; transition: 0.3s; }
 
         /* SERVICES */
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
@@ -82,6 +92,34 @@
             border: 4px solid white;
         }
 
+        /* Bouton Carte Animé */
+        .btn-map-call {
+            position: absolute; 
+            bottom: 30px; 
+            left: calc(50% + 100px); 
+            transform: translateX(-50%); 
+            background: var(--accent); 
+            color: var(--dark); 
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
+            border: 2px solid white; 
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .btn-map-call:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 15px 35px rgba(56, 182, 255, 0.5);
+        }
+
         /* CONTACT */
         .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
         .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
@@ -97,7 +135,10 @@
         .qr-box { background: white; padding: 10px; border-radius: 8px; width: 120px; text-align: center; }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
 
-        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { 
+            .about-grid, .contact-flex { grid-template-columns: 1fr; } 
+            .btn-map-call { left: 50%; } /* Recentrage sur mobile */
+        }
     </style>
 </head>
 <body>
@@ -123,7 +164,7 @@
             <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
         </div>
         <a href="tel:0622390314" class="urgent-call">
-            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage (Cliquez pour appeler)</h3>
+            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage</h3>
             <span class="tel-link">06 22 39 03 14</span>
             <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
         </a>
@@ -174,44 +215,6 @@
             📞 APPELER : 06 22 39 03 14
         </a>
     </div>
-
-    <style>
-        .btn-map-call {
-            position: absolute; 
-            bottom: 30px; 
-            /* Décalage vers la droite (50% + 100px) */
-            left: calc(70% + 100px); 
-            transform: translateX(-50%); 
-            background: var(--accent); 
-            color: var(--dark); 
-            padding: 15px 30px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 900; 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
-            border: 2px solid white; 
-            white-space: nowrap;
-            transition: all 0.3s ease; /* Fluidité de l'animation */
-        }
-
-        /* Animation au passage de la souris */
-        .btn-map-call:hover {
-            background: var(--primary); /* Change en bleu */
-            color: white;
-            transform: translateX(-50%) scale(1.1); /* S'agrandit légèrement */
-            box-shadow: 0 15px 35px rgba(56, 182, 255, 0.5);
-        }
-
-        /* Adaptation mobile pour que le bouton ne sorte pas de l'écran */
-        @media (max-width: 600px) {
-            .btn-map-call {
-                left: 50%; /* On le recentre sur petit écran */
-            }
-        }
-    </style>
 </section>
 
 <section id="contact">
