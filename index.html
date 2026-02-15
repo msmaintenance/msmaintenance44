@@ -132,11 +132,40 @@
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
         
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
-        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
+        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; transition: 0.3s; }
+        .qr-box:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(56, 182, 255, 0.4); }
+        .qr-box a { text-decoration: none; display: block; }
         
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
         .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
         .footer-card-img { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+        /* BOUTON RETOUR EN HAUT */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 2000;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+        .back-to-top:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
 
         @media (max-width: 900px) { 
             .about-grid, .contact-flex { grid-template-columns: 1fr; } 
@@ -146,7 +175,7 @@
         }
     </style>
 </head>
-<body>
+<body id="top">
 
 <header>
     <img src="logo.jpg" alt="Logo MMS 44" class="logo">
@@ -265,9 +294,10 @@
     <div>
         <h3>Contact</h3>
         <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
-        <p>🕒 Lun - Ven : 8h - 18h<br>Sam : 8h - 12h</p>
+        <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
+        <p style="margin-top:10px;">🕒 Lun - Ven : 8h - 18h<br>Sam : 8h - 12h</p>
         <div style="margin-top: 20px;">
-            <img src="carte-de-visite.jpg" alt="Carte de visite" class="footer-card-img">
+            <img src="carte-de-visite.jpg" alt="Carte de visite MMS 44" class="footer-card-img">
         </div>
     </div>
 
@@ -275,15 +305,19 @@
         <h3>Suivez-nous</h3>
         <div class="qr-wrapper">
             <div class="qr-box">
-                <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
-                <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold; text-transform:uppercase;">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" title="Voir mon LinkedIn">
+                    <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+                    <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold; text-transform:uppercase;">LinkedIn</p>
+                </a>
             </div>
             <div class="qr-box">
-                <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
-                <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold; text-transform:uppercase;">Facebook</p>
+                <a href="https://www.facebook.com/profile.php?id=61586947096855&locale=fr_FR" target="_blank" title="Voir mon Facebook">
+                    <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
+                    <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold; text-transform:uppercase;">Facebook</p>
+                </a>
             </div>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 15px;">Scannez pour nous rejoindre sur les réseaux sociaux.</p>
+        <p style="font-size: 0.8rem; margin-top: 15px;">Cliquez ou scannez pour me rejoindre sur les réseaux sociaux.</p>
     </div>
 
     <div class="footer-bottom">
@@ -291,6 +325,8 @@
         <p><a href="cgv.pdf" style="color:#888;">CGV</a> | <a href="mentions-legales.html" style="color:#888;">Mentions Légales</a></p>
     </div>
 </footer>
+
+<a href="#top" class="back-to-top" title="Retour en haut">↑</a>
 
 </body>
 </html>
