@@ -130,7 +130,10 @@
 
         /* FOOTER */
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .qr-box { background: white; padding: 10px; border-radius: 8px; width: 120px; text-align: center; margin-top: 10px; }
+        
+        .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
+        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
+        
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
         .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
         .footer-card-img { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
@@ -138,6 +141,8 @@
         @media (max-width: 900px) { 
             .about-grid, .contact-flex { grid-template-columns: 1fr; } 
             .btn-map-call { left: 50%; }
+            footer { text-align: center; }
+            .qr-wrapper { justify-content: center; }
         }
     </style>
 </head>
@@ -267,12 +272,18 @@
     </div>
 
     <div>
-        <h3>Réseaux Sociaux</h3>
-        <div class="qr-box">
-            <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
-            <p style="font-size:0.6rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
+        <h3>Suivez-nous</h3>
+        <div class="qr-wrapper">
+            <div class="qr-box">
+                <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+                <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold; text-transform:uppercase;">LinkedIn</p>
+            </div>
+            <div class="qr-box">
+                <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
+                <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold; text-transform:uppercase;">Facebook</p>
+            </div>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 15px;">Scannez pour me rejoindre sur LinkedIn</p>
+        <p style="font-size: 0.8rem; margin-top: 15px;">Scannez pour nous rejoindre sur les réseaux sociaux.</p>
     </div>
 
     <div class="footer-bottom">
