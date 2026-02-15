@@ -41,138 +41,78 @@
         .section-title h2 { font-size: 2.2rem; color: var(--dark); text-transform: uppercase; margin-bottom: 10px; }
         .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 0 auto; }
 
-        /* ABOUT & BOUTON APPEL HAUT */
+        /* GALERIE REALISATIONS */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+        .photo-card { 
+            background: var(--white); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .photo-card:hover { transform: translateY(-10px); }
+        .photo-card img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            display: block; 
+            transition: 0.5s;
+        }
+        .photo-caption { padding: 15px; text-align: center; font-weight: 600; color: var(--dark); border-top: 3px solid var(--primary); }
+
+        /* LIGHTBOX (Agrandissement photo) */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; border: 3px solid white; border-radius: 5px; }
+        #lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+
+        /* ABOUT & APPEL */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         .highlight { color: var(--accent); font-weight: 700; }
-        
-        .urgent-call { 
-            background: var(--dark); 
-            color: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            border-left: 8px solid var(--accent);
-            text-decoration: none;
-            display: block;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .urgent-call:hover { 
-            transform: scale(1.05); 
-            background: var(--primary); 
-            border-color: white;
-            box-shadow: 0 15px 35px rgba(56, 182, 255, 0.4);
-        }
-        
-        .urgent-call:hover .tel-link { color: white; }
-        .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; transition: 0.3s; }
+        .urgent-call { background: var(--dark); color: white; padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent); text-decoration: none; display: block; transition: all 0.3s ease; border: 2px solid transparent; }
+        .urgent-call:hover { transform: scale(1.05); background: var(--primary); border-color: white; box-shadow: 0 15px 35px rgba(56, 182, 255, 0.4); }
+        .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; }
 
-        /* SERVICES */
+        /* SERVICES & ZONE (identiques au précédent) */
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); transition: 0.3s; }
+        .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); }
         ul { list-style: none; padding: 0; }
-        ul li { margin-bottom: 12px; padding-left: 30px; position: relative; }
-        ul li::before { content: "➔"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-
-        /* ZONE & MAP */
+        ul li::before { content: "➔"; color: var(--accent); margin-right: 10px; font-weight: bold; }
         .zone-box { background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); margin-bottom: 40px; }
         .city-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
         .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
-        
-        .map-fixed-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            height: 500px;
-            margin: 0 auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 4px solid white;
-        }
+        .map-fixed-container { position: relative; width: 100%; max-width: 900px; height: 500px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border: 4px solid white; }
+        .btn-map-call { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; transition: 0.3s; }
+        .btn-map-call:hover { background: var(--primary); color: white; transform: translateX(-50%) scale(1.1); }
 
-        .btn-map-call {
-            position: absolute; 
-            bottom: 30px; 
-            left: calc(70% + 110px); 
-            transform: translateX(-50%); 
-            background: var(--accent); 
-            color: var(--dark); 
-            padding: 15px 30px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 900; 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
-            border: 2px solid white; 
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-
-        .btn-map-call:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateX(-50%) scale(1.1);
-            box-shadow: 0 15px 35px rgba(56, 182, 255, 0.5);
-        }
-
-        /* CONTACT */
+        /* CONTACT & FOOTER (identiques au précédent) */
         .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
         .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
-        .contact-info-block a { color: var(--primary); text-decoration: none; font-weight: bold; }
         .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
         .form-group { margin-bottom: 20px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; text-transform: uppercase; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
         .btn-submit:hover { background: var(--primary); color: white; }
-
-        /* FOOTER */
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
-        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; transition: 0.3s; }
-        .qr-box:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(56, 182, 255, 0.4); }
-        .qr-box a { text-decoration: none; display: block; }
-        
+        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
-        .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
-        .footer-card-img { max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000; border: 2px solid white; transition: 0.3s; }
+        .back-to-top:hover { background: var(--primary); color: white; }
 
-        /* BOUTON RETOUR EN HAUT */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--accent);
-            color: var(--dark);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 2000;
-            transition: 0.3s;
-            border: 2px solid white;
-        }
-        .back-to-top:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-        }
-
-        @media (max-width: 900px) { 
-            .about-grid, .contact-flex { grid-template-columns: 1fr; } 
-            .btn-map-call { left: 50%; }
-            footer { text-align: center; }
-            .qr-wrapper { justify-content: center; }
-        }
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } footer { text-align: center; } .qr-wrapper { justify-content: center; } }
     </style>
 </head>
 <body id="top">
@@ -186,6 +126,7 @@
 <nav>
     <a href="#about">L'Entreprise</a>
     <a href="#services">Prestations</a>
+    <a href="#realisations">Réalisations</a>
     <a href="#zone">Secteur</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -233,7 +174,30 @@
     </div>
 </section>
 
-<section id="zone">
+<section id="realisations">
+    <div class="section-title"><h2>Mes Réalisations</h2></div>
+    <div class="gallery-grid">
+        <div class="photo-card" onclick="openLightbox('photo1.jpg')">
+            <img src="photo1.jpg" alt="Maintenance">
+            <div class="photo-caption">Maintenance Industrielle</div>
+        </div>
+        <div class="photo-card" onclick="openLightbox('photo2.jpg')">
+            <img src="photo2.jpg" alt="Soudure">
+            <div class="photo-caption">Travaux de Soudure</div>
+        </div>
+        <div class="photo-card" onclick="openLightbox('photo3.jpg')">
+            <img src="photo3.jpg" alt="Dépannage">
+            <div class="photo-caption">Dépannage Mécanique</div>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<section id="zone" style="background-color: #f1f5f9;">
     <div class="section-title"><h2>Secteur d'Intervention</h2></div>
     <div class="zone-box">
         <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
@@ -243,12 +207,9 @@
             <span class="city-tag">Pénestin</span><span class="city-tag">Muzillac</span><span class="city-tag">Sévérac</span><span class="city-tag">Pontchâteau</span><span class="city-tag">Saint André des Eaux</span>
         </div>
     </div>
-    
     <div class="map-fixed-container">
         <img src="ma-carte.jpg" alt="Secteur d'intervention MMS 44" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        <a href="tel:0622390314" class="btn-map-call">
-            📞 APPELER : 06 22 39 03 14
-        </a>
+        <a href="tel:0622390314" class="btn-map-call">📞 APPELER : 06 22 39 03 14</a>
     </div>
 </section>
 
@@ -261,9 +222,8 @@
             <p>📞 <a href="tel:0622390314">06 22 39 03 14</a></p>
             <p>📧 <a href="mailto:msmaintenance44@gmail.com">msmaintenance44@gmail.com</a></p>
             <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-            <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum pour toute demande de devis."</p>
+            <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum."</p>
         </div>
-
         <div class="form-container">
             <form action="https://formspree.io/f/votre_code_ici" method="POST">
                 <div class="form-group"><input type="text" name="name" required placeholder="Votre Nom / Entreprise"></div>
@@ -286,49 +246,51 @@
     <div>
         <img src="logo.jpg" alt="Logo MMS 44" class="footer-logo-small">
         <h3>Navigation</h3>
-        <ul style="padding:0;">
+        <ul style="padding:0; list-style:none;">
             <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
             <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
             <li><a href="#zone" style="color:#ccc; text-decoration:none;">Secteur</a></li>
         </ul>
     </div>
-
     <div>
         <h3>Contact</h3>
         <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
         <p>📧 <a href="mailto:msmaintenance44@gmail.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
-        <p style="margin-top:10px;">🕒 Lun - Ven : 8h - 18h<br>Sam : 8h - 12h</p>
-        <div style="margin-top: 20px;">
-            <img src="carte-de-visite.jpg" alt="Carte de visite MMS 44" class="footer-card-img">
-        </div>
+        <div style="margin-top: 20px;"><img src="carte-de-visite.jpg" alt="Carte" class="footer-card-img"></div>
     </div>
-
     <div>
         <h3>Suivez-nous</h3>
         <div class="qr-wrapper">
             <div class="qr-box">
-                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" title="Voir mon LinkedIn">
+                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank">
                     <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
-                    <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold; text-transform:uppercase;">LinkedIn</p>
+                    <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
                 </a>
             </div>
             <div class="qr-box">
-                <a href="https://www.facebook.com/profile.php?id=61586947096855&locale=fr_FR" target="_blank" title="Voir mon Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank">
                     <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
-                    <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold; text-transform:uppercase;">Facebook</p>
+                    <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold;">FACEBOOK</p>
                 </a>
             </div>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 15px;">Cliquez ou scannez pour me rejoindre sur les réseaux sociaux.</p>
     </div>
-
     <div class="footer-bottom">
-        <p><strong>Multi Maintenance Service 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
-        <p><a href="cgv.pdf" style="color:#888;">CGV</a> | <a href="mentions-legales.html" style="color:#888;">Mentions Légales</a></p>
+        <p><strong>MMS 44</strong> | SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
     </div>
 </footer>
 
-<a href="#top" class="back-to-top" title="Retour en haut">↑</a>
+<a href="#top" class="back-to-top">↑</a>
+
+<script>
+    function openLightbox(imgSrc) {
+        document.getElementById('lightbox-img').src = imgSrc;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
