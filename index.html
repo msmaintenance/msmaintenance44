@@ -65,7 +65,7 @@
         }
         .photo-caption { padding: 15px; text-align: center; font-weight: 600; color: var(--dark); border-top: 3px solid var(--primary); }
 
-        /* LIGHTBOX (Agrandissement photo) */
+        /* LIGHTBOX */
         #lightbox {
             display: none;
             position: fixed;
@@ -85,7 +85,7 @@
         .urgent-call:hover { transform: scale(1.05); background: var(--primary); border-color: white; box-shadow: 0 15px 35px rgba(56, 182, 255, 0.4); }
         .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; }
 
-        /* SERVICES & ZONE (identiques au précédent) */
+        /* SERVICES & ZONE */
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); }
         ul { list-style: none; padding: 0; }
@@ -97,7 +97,7 @@
         .btn-map-call { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 900; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid white; transition: 0.3s; }
         .btn-map-call:hover { background: var(--primary); color: white; transform: translateX(-50%) scale(1.1); }
 
-        /* CONTACT & FOOTER (identiques au précédent) */
+        /* CONTACT & FOOTER */
         .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
         .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
         .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
@@ -105,12 +105,17 @@
         .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
         .btn-submit { background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
         .btn-submit:hover { background: var(--primary); color: white; }
+        
         footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
+        
+        /* ICI LE RETOUR À LA TAILLE INITIALE */
+        .footer-card-img { max-width: 100%; width: 200px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
         .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
         .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000; border: 2px solid white; transition: 0.3s; }
-        .back-to-top:hover { background: var(--primary); color: white; }
 
         @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } footer { text-align: center; } .qr-wrapper { justify-content: center; } }
     </style>
