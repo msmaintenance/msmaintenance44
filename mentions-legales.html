@@ -3,114 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi Maintenance Service 44 | Maintenance & Soudure</title>
+    <title>Mentions Légales - Multi Maintenance Service 44</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #e67e22;
-            --light: #f4f4f4;
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --text-color: #333;
+            --bg-color: #ffffff;
+            --section-bg: #f8f9fa;
         }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: var(--primary); color: white; padding: 2rem 1rem; text-align: center; }
-        nav { background: #eee; padding: 10px; text-align: center; position: sticky; top: 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: bold; }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-        .hero { background: var(--light); padding: 40px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
-        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-        .contact-form { background: var(--primary); color: white; padding: 30px; border-radius: 8px; margin-top: 20px; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: none; }
-        button { background: var(--accent); color: white; padding: 12px 25px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
-        .legal-section { font-size: 0.85rem; background: #f9f9f9; padding: 20px; margin-top: 20px; border-radius: 8px; display: none; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 4px solid var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            font-size: 1.4rem;
+        }
+
+        .container {
+            padding: 0 10px;
+        }
+
+        .info-block {
+            background-color: var(--section-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e1e4e8;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            h1 { font-size: 1.6rem; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Multi Maintenance Service 44</h1>
-    <p>Maintenance Industrielle | Soudure | Dépannage Multi-services</p>
-</header>
+    <a href="index.html" class="back-link">← Retour au site</a>
 
-<nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <header>
+        <h1>Mentions Légales</h1>
+        <p><strong>Multi Maintenance Service 44</strong></p>
+    </header>
 
-<div class="container" id="accueil">
-    <div class="hero">
-        <h2>Expertise technique à Saint-Molf et sa région</h2>
-        <p>Bonjour, je suis <strong>Alexandre RENAULT</strong>. Spécialiste en maintenance industrielle et métallurgie, j'accompagne les professionnels et les particuliers pour tous travaux de dépannage, soudure (TIG/MAG) et assistance technique sur la Presqu'île Guérandaise.</p>
-    </div>
-
-    <section id="services">
-        <h2>Nos Prestations</h2>
-        <div class="services">
-            <div class="card">
-                <h3>🛠 Maintenance Industrielle</h3>
-                <p>Maintenance préventive et curative : mécanique, électrique, pneumatique et hydraulique.</p>
-            </div>
-            <div class="card">
-                <h3>🔥 Soudure & Métallurgie</h3>
-                <p>Travaux de serrurerie et soudure haute précision sur acier et inox.</p>
-            </div>
-            <div class="card">
-                <h3>🏠 Services à l'habitat</h3>
-                <p>Dépannage multi-services et maintenance technique pour particuliers et collectivités.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-form">
-            <h2>Demander un devis gratuit</h2>
-            <form action="https://formspree.io/f/ton-code-formspree" method="POST">
-                <label>Votre Nom :</label>
-                <input type="text" name="name" required>
-                <label>Votre Email :</label>
-                <input type="email" name="_replyto" required>
-                <label>Description de votre besoin :</label>
-                <textarea name="message" rows="5" required></textarea>
-                <button type="submit">Envoyer la demande</button>
-            </form>
-        </div>
-    </section>
-
-    <p style="text-align: center; margin-top: 30px;">
-        <button onclick="toggleLegal()" style="background: #777;">Voir les Mentions Légales et CGV</button>
-    </p>
-
-    <div id="legal" class="legal-section">
-        <h3>Mentions Légales</h3>
-        <p><strong>Editeur :</strong> Alexandre RENAULT EI | SIRET : 998 928 634 00018<br>
-        <strong>Adresse :</strong> 13 La croix de bois, 44350 Saint-Molf<br>
-        <strong>TVA :</strong> TVA non applicable, art. 293 B du CGI.<br>
-        <strong>Hébergement :</strong> GitHub Inc. | Formulaire : Formspree Inc.<br>
-        <strong>Données :</strong> Les données collectées via le formulaire sont conservées 3 ans pour répondre à vos demandes. Vous disposez d'un droit d'accès via msmaintenance44@gmail.com.</p>
+    <div class="container">
         
-        <h3>Cookies</h3>
-        <p>Ce site n'utilise aucun cookie de traçage ou publicitaire.</p>
+        <section class="info-block">
+            <h2>1. Éditeur du site</h2>
+            <p>Le site Multi Maintenance Service 44 est édité par :</p>
+            <ul>
+                <li><strong>Identité :</strong> Alexandre RENAULT, agissant en qualité d'Entrepreneur Individuel (<strong>EI</strong>).</li>
+                <li><strong>Enseigne :</strong> Multi Maintenance Service 44.</li>
+                <li><strong>Siège social :</strong> 13 La croix de bois, 44350 Saint-Molf.</li>
+                <li><strong>SIRET :</strong> 998 928 634 00018.</li>
+                <li><strong>Contact :</strong> 06 22 39 03 14 / msmaintenance44@gmail.com.</li>
+                <li><strong>Régime fiscal :</strong> TVA non applicable, art. 293 B du CGI.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Hébergement et Gestion des formulaires</h2>
+            <p><strong>Hébergeur du site :</strong><br>
+            GitHub Inc., dont le siège social est situé : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
+            
+            <p><strong>Gestionnaire de formulaire :</strong><br>
+            Le formulaire de contact est propulsé par <strong>Formspree Inc.</strong> (New York, USA). Ce service permet de transmettre vos demandes directement à l'adresse e-mail de l'éditeur.</p>
+        </section>
+
+        <section>
+            <h2>3. Transferts de données hors Union Européenne</h2>
+            <p>L'utilisateur est informé que les données collectées (via GitHub Pages et Formspree) sont stockées sur des serveurs situés aux États-Unis.</p>
+            <p>Conformément au RGPD, ce transfert est encadré par :</p>
+            <ul>
+                <li>Le <strong>Data Privacy Framework</strong> (Cadre de protection des données UE-États-Unis), GitHub Inc. et Formspree Inc. étant certifiés auprès du Département du Commerce des États-Unis.</li>
+                <li>À défaut, des <strong>Clauses Contractuelles Types (CCT)</strong> adoptées par la Commission Européenne afin de garantir un niveau de protection des données équivalent à celui de l'Union Européenne.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Gestion des cookies et données techniques</h2>
+            <p>GitHub peut collecter des données techniques de navigation (adresses IP, logs) pour des raisons de sécurité et de maintenance du service. En tant qu'éditeur du site, Multi Maintenance Service 44 s'engage à ne pas traiter ces données à d'autres fins sans votre consentement préalable.</p>
+        </section>
+
+        <section>
+            <h2>5. Propriété intellectuelle</h2>
+            <p>L'ensemble de ce site (structure, textes, logo, photos) relève de la législation française et internationale sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans l'accord écrit d'Alexandre RENAULT.</p>
+        </section>
+
+        <section>
+            <h2>6. Protection des données personnelles (RGPD)</h2>
+            <p>Conformément au Règlement Général sur la Protection des Données (RGPD) :</p>
+            <ul>
+                <li><strong>Données collectées :</strong> Seules les données envoyées via le formulaire de contact (Nom, adresse Email, contenu du Message) sont collectées pour répondre à vos demandes.</li>
+                <li><strong>Finalité :</strong> Ces données sont utilisées exclusivement pour répondre à vos demandes de devis ou d'information.</li>
+                <li><strong>Sous-traitance :</strong> En remplissant le formulaire, vous acceptez que vos données transitent par les serveurs de Formspree conformément à leur politique de confidentialité.</li>
+                <li><strong>Conservation :</strong> Les données sont conservées pour une durée maximale de 3 ans après le dernier contact.</li>
+                <li><strong>Vos droits :</strong> Vous disposez d'un droit d'accès, de rectification et de suppression de vos données en contactant : msmaintenance44@gmail.com.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Cookies</h2>
+            <p>Ce site est une vitrine statique. Il n'utilise <strong>aucun cookie de traçage publicitaire ou de profilage</strong>. Seuls les cookies techniques nécessaires au fonctionnement de l'hébergeur peuvent être présents.</p>
+        </section>
+
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2026 Multi Maintenance Service 44 - Alexandre RENAULT EI</p>
-    <p>TVA non applicable, art. 293 B du CGI</p>
-</footer>
-
-<script>
-    function toggleLegal() {
-        var x = document.getElementById("legal");
-        if (x.style.display === "none" || x.style.display === "") {
-            x.style.display = "block";
-            window.scrollTo(0,document.body.scrollHeight);
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
+    <footer>
+        <p>&copy; 2026 Multi Maintenance Service 44 - Alexandre RENAULT EI</p>
+        <p>TVA non applicable, art. 293 B du CGI</p>
+    </footer>
 
 </body>
 </html>
