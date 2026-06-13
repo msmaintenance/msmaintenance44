@@ -116,4 +116,228 @@
         ul li::before { content: "➔"; color: var(--accent); margin-right: 10px; font-weight: bold; }
         
         .zone-box { background: var(--white); padding: 40px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); margin-bottom: 40px; }
-        .city-grid { display: flex;
+        .city-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+        .city-tag { background: var(--light); border: 1px solid var(--primary); padding: 8px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }
+        
+        .map-fixed-container { position: relative; width: 100%; max-width: 900px; height: 500px; margin: 0 auto; border-radius: 15px; overflow: hidden; border: 4px solid white; }
+        
+        @keyframes pulse-btn {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+        .btn-map-call { position: absolute; bottom: 30px; left: 75%; transform: translateX(-50%); background: var(--accent); color: var(--dark); padding: 10px 50px; border-radius: 50px; text-decoration: none; font-weight: 900; border: 2px solid white; animation: pulse-btn 2s infinite; z-index: 10; white-space: nowrap; }
+
+        .contact-flex { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+        .contact-info-block { background: var(--dark); color: white; padding: 40px; border-radius: 15px; }
+        .form-container { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
+        .form-group { margin-bottom: 20px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+        
+        footer { background: #111; color: #ccc; padding: 60px 10% 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-logo-small { max-width: 150px; border-radius: 5px; margin-bottom: 15px; border: 1px solid var(--primary); }
+        .footer-card-img { max-width: 100%; width: 260px; border-radius: 8px; }
+        
+        .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
+        .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; }
+        .footer-bottom { grid-column: 1 / -1; text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 0.8rem; }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--dark); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; z-index: 2000; border: 2px solid white; }
+
+        @media (max-width: 900px) { .about-grid, .contact-flex { grid-template-columns: 1fr; } .btn-map-call { left: 50%; width: 85%; text-align: center; font-size: 0.8rem; } }
+    </style>
+</head>
+<body id="top">
+
+<header>
+    <img src="logo.jpg" alt="Logo MMS 44" class="logo">
+    <h1>Multi Maintenance Service 44</h1>
+    <p style="color: var(--primary); font-weight: bold; text-transform: uppercase;">Maintenance Industrielle & Services aux particuliers</p>
+</header>
+
+<nav>
+    <a href="#about">L'Entreprise</a>
+    <a href="#services">Prestations</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#zone">Secteur</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="section-title"><h2>15 ans d'expertise technique</h2></div>
+    <div class="about-grid">
+        <div>
+            <p>Basé à <span class="highlight">Saint-Molf</span>, <strong>Multi Maintenance Service 44</strong> propose un service de maintenance rigoureux pour les entreprises et les particuliers.</p>
+            <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
+        </div>
+        <a href="tel:0622390314" class="urgent-call">
+            <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage Urgent</h3>
+            <span class="tel-link">06 22 39 03 14</span>
+            <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
+        </a>
+    </div>
+</section>
+
+<section id="services" style="background-color: #f1f5f9;">
+    <div class="section-title"><h2>Nos Prestations</h2></div>
+    <div class="grid-services">
+        <div class="card">
+            <h3>🏭 Industrie et PME</h3>
+            <ul>
+                <li>Maintenance préventive & corrective</li>
+                <li>Dépannage machines & process</li>
+                <li>Travaux d'amélioration et de modifiction</li>
+                <li>Soudure Acier/Inox</li>
+                <li>Diagnostics mécanique, électrique et pneumatique</li>
+                <li>Dépannage d'électroportatif et de machine outil</li>
+                <li>Renfort d'équipe & Assistance technique</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>🏠 Particuliers</h3>
+            <ul>
+                <li>Dépannage électrique & mécanique</li>
+                <li>Soudure (Portails, mobiliers, cadres)</li>
+                <li>Entretien & Montage d'équipements</li>
+                <li>Petits travaux de maintenance habitat</li>
+                <li>Conseils techniques personnalisés</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="realisations">
+    <div class="section-title"><h2>Mes Réalisations</h2></div>
+    <div class="gallery-grid">
+        <div class="photo-card" onclick="openLightbox('photo1.jpg')">
+            <img src="photo1.jpg" alt="Maintenance Industrielle">
+            <div class="photo-caption">Maintenance Préventive mécanique</div>
+        </div>
+        <div class="photo-card" onclick="openLightbox('photo2.jpg')">
+            <img src="photo2.jpg" alt="Travaux de soudure">
+            <div class="photo-caption">Réalisation d'un support d'outillage en inox</div>
+        </div>
+        <div class="photo-card" onclick="openLightbox('photo3.jpg')">
+            <img src="photo3.jpg" alt="Dépannage mécanique">
+            <div class="photo-caption">Réparation d'une pompe, remplacement de garniture</div>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<section id="zone" style="background-color: #f1f5f9;">
+    <div class="section-title"><h2>Secteur d'Intervention</h2></div>
+    <div class="zone-box">
+        <p>Intervention dans un rayon de <strong>40 km autour de Saint-Molf</strong>.</p>
+        <div class="city-grid">
+            <span class="city-tag">Saint-Molf</span><span class="city-tag">Guérande</span><span class="city-tag">Herbignac</span>
+            <span class="city-tag">La Baule</span><span class="city-tag">Pornichet</span><span class="city-tag">Le Croisic</span>
+            <span class="city-tag">Saint-Nazaire</span><span class="city-tag">Nivillac</span><span class="city-tag">Pénestin</span>
+            <span class="city-tag">Muzillac</span><span class="city-tag">Sévérac</span><span class="city-tag">Pontchâteau</span>
+            <span class="city-tag">Saint André des Eaux</span>
+        </div>
+    </div>
+    <div class="map-fixed-container">
+        <img src="maintenance-industrielle-saint-molf-44.jpg" alt="Secteur MMS 44" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <a href="tel:0622390314" class="btn-map-call">📞 APPELER : 06 22 39 03 14</a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title"><h2>Contactez-nous</h2></div>
+    <div class="contact-flex">
+        <div class="contact-info-block">
+            <h3 style="color: var(--accent);">Multi Maintenance Service 44</h3>
+            <p>📍 44350 Saint-Molf</p>
+            <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none;">06 22 39 03 14</a></p>
+            <p>📧 <a href="mailto:msmaintenance44@gmail.com?subject=Demande de devis / information MMS44&body=Bonjour MMS44,%0D%0A%0D%0AJe vous contacte concernant : %0D%0A%0D%0AMon besoin concerne : %0D%0A%0D%0AMes coordonnées : " style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+            <p style="font-size: 0.9rem; font-style: italic; color: #aaa;">"Réponse sous 48h maximum."</p>
+        </div>
+        <div class="form-container">
+            <form action="https://formspree.io/f/xbdaowje" method="POST">
+                <div class="form-group"><input type="text" name="name" required placeholder="Votre Nom / Entreprise"></div>
+                <div class="form-group"><input type="email" name="email" required placeholder="Votre Email"></div>
+                <div class="form-group">
+                    <select name="type">
+                        <option value="industrie">Maintenance Industrielle</option>
+                        <option value="particulier">Service Particulier</option>
+                        <option value="soudure">Travaux de Soudure</option>
+                    </select>
+                </div>
+                <div class="form-group"><textarea name="message" rows="4" required placeholder="Détaillez votre besoin ici..."></textarea></div>
+                <div class="form-group">
+                    <label style="font-size: 0.8rem; color: #666; cursor: pointer; display: flex; gap: 10px;">
+                        <input type="checkbox" required style="width: auto;"> 
+                        <span>J'accepte que mes données soient utilisées pour être recontacté.</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit" style="background: var(--accent); color: var(--dark); border: none; padding: 15px; font-weight: 900; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; text-transform: uppercase;">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <img src="logo.jpg" alt="Logo MMS 44" class="footer-logo-small">
+        <h3>Navigation</h3>
+        <ul style="padding:0; list-style:none;">
+            <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
+            <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
+            <li><a href="#realisations" style="color:#ccc; text-decoration:none;">Réalisations</a></li>
+            <li><a href="#zone" style="color:#ccc; text-decoration:none;">Secteur</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Contact Direct</h3>
+        <p>📞 <a href="tel:0622390314" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
+        <div style="margin-top: 20px;">
+            <img src="carte-de-visite.jpg" alt="Carte" class="footer-card-img">
+        </div>
+    </div>
+    <div>
+        <h3>Suivez-nous</h3>
+        <div class="qr-wrapper">
+            <div class="qr-box">
+                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank">
+                    <img src="qr-code-linkdin.png" alt="LinkedIn" style="width:100%;">
+                    <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
+                </a>
+            </div>
+            <div class="qr-box">
+                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank">
+                    <img src="qr-code-facebook.png" alt="Facebook" style="width:100%;">
+                    <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold;">FACEBOOK</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><strong>Alexandre RENAULT EI</strong> - Multi Maintenance Service 44</p>
+        <p>SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
+        <p><strong>TVA non applicable, art. 293 B du CGI</strong></p>
+        <p style="margin-top: 15px;">
+            <a href="cgv.pdf" target="_blank" style="color:#888; text-decoration:none;">CGV</a> |  
+            <a href="mentions-legales.html" style="color:#888; text-decoration:none;">Mentions Légales</a>
+        </p>
+    </div>
+</footer>
+
+<a href="#top" class="back-to-top" style="text-decoration: none; color: var(--dark);">↑</a>
+
+<script>
+    function openLightbox(imgSrc) {
+        document.getElementById('lightbox-img').src = imgSrc;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
