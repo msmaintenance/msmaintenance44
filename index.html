@@ -11,16 +11,25 @@
 
     <meta name="google-site-verification" content="ii79XeqetaweTMsP-aCvW90kj5YTzqll1JHnZImIt_4" />
 
+    <!-- Balises Open Graph pour optimiser le partage sur LinkedIn, Facebook et SMS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://msmaintenance.github.io/msmaintenance44/">
+    <meta property="og:title" content="Maintenance industrielle Saint-Molf (44) | MMS 44">
+    <meta property="og:description" content="Entretien et maintenance mécanique, électrique, pneumatique, soudure TIG/MIG. Dépannage rapide en Loire-Atlantique.">
+    <meta property="og:image" content="logo.jpg">
+
+    <!-- Données structurées JSON-LD enrichies pour le SEO Local et technique -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Multi Maintenance Service 44",
       "alternateName": "MMS 44",
-      "description": "Maintenance industrielle, dépannage mécanique, électrique, pneumatique and soudure TIG/MIG. Intervention rapide pour TPE, PME et industries. Rayon 40 km autour de Saint-Molf.",
+      "description": "Maintenance industrielle, dépannage mécanique, électrique, pneumatique et soudure TIG/MIG. Intervention rapide pour TPE, PME et industries. Rayon 40 km autour de Saint-Molf.",
       "url": "https://msmaintenance.github.io/msmaintenance44/",
       "telephone": "+33622390314",
       "email": "msmaintenance44@gmail.com",
+      "image": "https://msmaintenance.github.io/msmaintenance44/logo.jpg",
       "founder": {
         "@type": "Person",
         "name": "Alexandre Renault"
@@ -30,7 +39,8 @@
         "@type": "PostalAddress",
         "addressLocality": "Saint-Molf",
         "postalCode": "44350",
-        "addressCountry": "FR"
+        "addressCountry": "FR",
+        "addressRegion": "Loire-Atlantique"
       },
       "geo": {
         "@type": "GeoCoordinates",
@@ -42,7 +52,7 @@
         "Saint-Nazaire", "Pontchâteau", "Pornichet", "Le Croisic",
         "Nivillac", "Pénestin", "Muzillac", "Sévérac", "Saint-André-des-Eaux"
       ],
-      "serviceType": [
+      "knowsAbout": [
         "Maintenance industrielle préventive et corrective",
         "Dépannage mécanique",
         "Dépannage électrique",
@@ -121,9 +131,11 @@
         .urgent-call { background: var(--dark); color: white; padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent); text-decoration: none; display: block; transition: all 0.3s ease; }
         .urgent-call:hover { transform: scale(1.05); background: var(--primary); }
         
+        /* Animation du numéro dans le bloc d'urgence */
         .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; transition: transform 0.3s ease; }
         .urgent-call:hover .tel-link { transform: scale(1.05); }
 
+        /* Animation des e-mails et téléphones dans le texte */
         .animated-link { transition: all 0.3s ease; display: inline-block; }
         .animated-link:hover { transform: translateY(-2px); opacity: 0.85; }
 
@@ -160,6 +172,7 @@
         
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
         
+        /* Animation fluide des QR codes au survol */
         .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; }
         .qr-box:hover { transform: scale(1.1); box-shadow: 0 8px 20px rgba(56, 182, 255, 0.4); }
         
@@ -192,7 +205,7 @@
             <p>Basé à <span class="highlight">Saint-Molf</span>, <strong>Multi Maintenance Service 44</strong> propose un service de maintenance rigoureux pour les entreprises et les particuliers.</p>
             <p>Spécialiste du dépannage mécanique, électrique et de la soudure, j'interviens avec réactivité dans tout le bassin Nazairien et la Presqu'île Guérandaise.</p>
         </div>
-        <a href="tel:0622390314" class="urgent-call">
+        <a href="tel:0622390314" class="urgent-call" aria-label="Appel d'urgence pour dépannage de maintenance industrielle">
             <h3 style="color: var(--accent); margin:0; text-transform: uppercase;">Dépannage Urgent</h3>
             <span class="tel-link">06 22 39 03 14</span>
             <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #bbb;">Intervention prioritaire en cas de panne de production.</p>
@@ -283,7 +296,7 @@
         allowfullscreen="" loading="lazy"
         title="Carte de la zone d'intervention de Multi Maintenance Service 44">
     </iframe>
-    <a href="tel:0622390314" class="btn-map-call">📞 APPELER : 06 22 39 03 14</a>
+    <a href="tel:0622390314" class="btn-map-call" aria-label="Contacter Multi Maintenance Service 44 par téléphone">📞 APPELER : 06 22 39 03 14</a>
 </div>
 </section>
 
@@ -368,7 +381,7 @@
     </div>
 </footer>
 
-<a href="#top" class="back-to-top" style="text-decoration: none; color: var(--dark);">↑</a>
+<a href="#top" class="back-to-top" style="text-decoration: none; color: var(--dark);" aria-label="Remonter en haut de page">↑</a>
 
 <script>
     function openLightbox(imgSrc) {
