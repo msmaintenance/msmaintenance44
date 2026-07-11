@@ -17,7 +17,7 @@
       "@type": "LocalBusiness",
       "name": "Multi Maintenance Service 44",
       "alternateName": "MMS 44",
-      "description": "Maintenance industrielle, dépannage mécanique, électrique, pneumatique et soudure TIG/MIG. Intervention rapide pour TPE, PME et industries. Rayon 40 km autour de Saint-Molf.",
+      "description": "Maintenance industrielle, dépannage mécanique, électrique, pneumatique and soudure TIG/MIG. Intervention rapide pour TPE, PME et industries. Rayon 40 km autour de Saint-Molf.",
       "url": "https://msmaintenance.github.io/msmaintenance44/",
       "telephone": "+33622390314",
       "email": "msmaintenance44@gmail.com",
@@ -84,6 +84,7 @@
         
         header { background: var(--dark); color: var(--white); padding: 5rem 10% 3rem; text-align: center; border-bottom: 6px solid var(--accent); }
         .logo { max-width: 450px; width: 100%; border-radius: 8px; margin-bottom: 20px; border: 3px solid var(--primary); }
+        header h2 { font-size: 1rem; margin: 0; font-weight: bold; text-transform: uppercase; }
         
         nav { background: var(--white); display: flex; justify-content: center; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         nav a { color: var(--dark); padding: 1.2rem 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
@@ -120,16 +121,15 @@
         .urgent-call { background: var(--dark); color: white; padding: 30px; border-radius: 15px; border-left: 8px solid var(--accent); text-decoration: none; display: block; transition: all 0.3s ease; }
         .urgent-call:hover { transform: scale(1.05); background: var(--primary); }
         
-        /* Animation fluide du numéro de téléphone dans le bandeau urgent */
         .tel-link { color: var(--accent); font-weight: 900; font-size: 1.6rem; display: block; margin-top: 5px; transition: transform 0.3s ease; }
         .urgent-call:hover .tel-link { transform: scale(1.05); }
 
-        /* Animation des liens e-mails et numéros de téléphone standards cliquables */
         .animated-link { transition: all 0.3s ease; display: inline-block; }
         .animated-link:hover { transform: translateY(-2px); opacity: 0.85; }
 
         .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
         .card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow); border-top: 5px solid var(--primary); }
+        .card h3 { font-size: 1.17rem; margin-top: 0; }
         ul { list-style: none; padding: 0; }
         ul li::before { content: "➔"; color: var(--accent); margin-right: 10px; font-weight: bold; }
         
@@ -160,7 +160,6 @@
         
         .qr-wrapper { display: flex; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
         
-        /* Animation fluide des blocs QR Codes au survol */
         .qr-box { background: white; padding: 8px; border-radius: 8px; width: 110px; text-align: center; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; }
         .qr-box:hover { transform: scale(1.1); box-shadow: 0 8px 20px rgba(56, 182, 255, 0.4); }
         
@@ -173,9 +172,9 @@
 <body id="top">
 
 <header>
-    <img src="logo.jpg" alt="Logo Multi Maintenance Service 44" class="logo">
+    <img src="logo.jpg" alt="Logo officiel Multi Maintenance Service 44 - Saint-Molf" class="logo">
     <h1>Multi Maintenance Service 44</h1>
-    <p style="color: var(--primary); font-weight: bold; text-transform: uppercase;">Maintenance Industrielle & Services aux particuliers</p>
+    <h2 style="color: var(--primary);">Maintenance Industrielle & Services aux particuliers</h2>
 </header>
 
 <nav>
@@ -233,27 +232,27 @@
     <div class="section-title"><h2>Mes Réalisations</h2></div>
     <div class="gallery-grid">
         <div class="photo-card" onclick="openLightbox('photo1.jpg')">
-            <img src="photo1.jpg" alt="Maintenance Industrielle à Pontchâteau">
+            <img src="photo1.jpg" alt="Maintenance Industrielle mécanique à Pontchâteau - MMS 44">
             <div class="photo-caption">Maintenance Préventive mécanique</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo2.jpg')">
-            <img src="photo2.jpg" alt="Travaux de soudure sur la presqu'île de Guérande">
+            <img src="photo2.jpg" alt="Travaux de soudure TIG/MIG sur la presqu'île de Guérande - MMS 44">
             <div class="photo-caption">Réalisation d'un support d'outillage en inox</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo3.jpg')">
-            <img src="photo3.jpg" alt="Dépannage mécanique sur Saint-Molf">
+            <img src="photo3.jpg" alt="Dépannage mécanique et réparation de pompe sur Saint-Molf - MMS 44">
             <div class="photo-caption">Réparation d'une pompe, remplacement de garniture</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo4.jpg')">
-            <img src="photo4.jpg" alt="Manutention machine sur Saint André des Eaux">
+            <img src="photo4.jpg" alt="Manutention et transfert de machine sur Saint André des Eaux - MMS 44">
             <div class="photo-caption">Manutention machine</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo5.jpg')">
-            <img src="photo5.jpg" alt="Raccordement électricité industrielle sur Guerande">
+            <img src="photo5.jpg" alt="Raccordement et électricité industrielle sur Guérande - MMS 44">
             <div class="photo-caption">Sertissage câble mono brin</div>
         </div>
         <div class="photo-card" onclick="openLightbox('photo6.jpg')">
-            <img src="photo6.jpg" alt="Réglage d'un programmateur à came sur La Baule">
+            <img src="photo6.jpg" alt="Réglage de programmateur à came sur La Baule - MMS 44">
             <div class="photo-caption">Réglage d'un programmateur à came</div>
         </div>
     </div>
@@ -261,7 +260,7 @@
 
 <div id="lightbox" onclick="closeLightbox()">
     <span id="lightbox-close">×</span>
-    <img id="lightbox-img" src="" alt="Aperçu de la réalisation">
+    <img id="lightbox-img" src="" alt="Aperçu de la réalisation technique de maintenance">
 </div>
 
 <section id="zone" style="background-color: #f1f5f9;">
@@ -292,7 +291,7 @@
     <div class="section-title"><h2>Contactez-nous</h2></div>
     <div class="contact-flex">
         <div class="contact-info-block">
-            <h3 style="color: var(--accent);">Multi Maintenance Service 44</h3>
+            <p style="font-size: 1.2rem; font-weight: bold; color: var(--accent); margin-top: 0;">Multi Maintenance Service 44</p>
             <p>📍 44350 Saint-Molf</p>
             <p>📞 <a href="tel:0622390314" class="animated-link" style="color:white; text-decoration:none;">06 22 39 03 14</a></p>
             <p>📧 <a href="mailto:msmaintenance44@gmail.com?subject=Demande de devis / information MMS44&body=Bonjour MMS44,%0D%0A%0D%0AJe vous contacte concernant : %0D%0A%0D%0AMon besoin concerne : %0D%0A%0D%0AMes coordonnées : " class="animated-link" style="color:var(--primary); text-decoration:none; font-weight:bold;">msmaintenance44@gmail.com</a></p>
@@ -325,8 +324,8 @@
 
 <footer>
     <div>
-        <img src="logo.jpg" alt="Logo MMS 44" class="footer-logo-small">
-        <h3>Navigation</h3>
+        <img src="logo.jpg" alt="Logo réduit MMS 44 - Dépannage mécanique et électrique" class="footer-logo-small">
+        <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Navigation</p>
         <ul style="padding:0; list-style:none;">
             <li><a href="#about" style="color:#ccc; text-decoration:none;">L'entreprise</a></li>
             <li><a href="#services" style="color:#ccc; text-decoration:none;">Prestations</a></li>
@@ -335,24 +334,24 @@
         </ul>
     </div>
     <div>
-        <h3>Contact Direct</h3>
+        <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Contact Direct</p>
         <p>📞 <a href="tel:0622390314" class="animated-link" style="color:white; text-decoration:none; font-weight:bold;">06 22 39 03 14</a></p>
         <div style="margin-top: 20px;">
-            <img src="carte-de-visite.jpg" alt="Carte de visite Multi Maintenance Service 44" class="footer-card-img">
+            <img src="carte-de-visite.jpg" alt="Carte de visite Multi Maintenance Service 44 - Alexandre Renault" class="footer-card-img">
         </div>
     </div>
     <div>
-        <h3>Suivez-nous</h3>
+        <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">Suivez-nous</p>
         <div class="qr-wrapper">
             <div class="qr-box">
-                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" style="text-decoration: none;">
-                    <img src="qr-code-linkdin.png" alt="QR Code LinkedIn - Multi Maintenance Service 44 Saint-Molf" style="width:100%;">
+                <a href="https://www.linkedin.com/in/multi-maintenance-service-a712573a7/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <img src="qr-code-linkdin.png" alt="QR Code LinkedIn - Profil professionnel MMS 44" style="width:100%;">
                     <p style="font-size:0.5rem; color:#0077b5; margin:0; font-weight:bold;">LINKEDIN</p>
                 </a>
             </div>
             <div class="qr-box">
-                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank" style="text-decoration: none;">
-                    <img src="qr-code-facebook.png" alt="QR Code Facebook - Multi Maintenance Service 44 Saint Molf" style="width:100%;">
+                <a href="https://www.facebook.com/profile.php?id=61586947096855" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    <img src="qr-code-facebook.png" alt="QR Code Facebook - Page Multi Maintenance Service 44" style="width:100%;">
                     <p style="font-size:0.5rem; color:#1877F2; margin:0; font-weight:bold;">FACEBOOK</p>
                 </a>
             </div>
@@ -363,7 +362,7 @@
         <p>SIRET : 998 928 634 00018 | 44350 Saint-Molf</p>
         <p><strong>TVA non applicable, art. 293 B du CGI</strong></p>
         <p style="margin-top: 15px;">
-            <a href="cgv.pdf" target="_blank" style="color:#888; text-decoration:none;">CGV</a> |  
+            <a href="cgv.pdf" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:none;">CGV</a> |  
             <a href="mentions-legales.html" style="color:#888; text-decoration:none;">Mentions Légales</a>
         </p>
     </div>
